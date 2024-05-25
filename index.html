@@ -5,35 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <center>
-        <input type="text" name="" id="input">
-        <br><br>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add a Task">
+                <button> Add</button>
+            </div>
+            <ul>
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 1</li>
+                <li>Task 1</li> -->
+            </ul>
+        </div>
+    </div>
 
-        <button onclick="update()">Add</button>
-        <ol id="list" style="list-style-position: inside;">
-            <li>
-                Hello
-                <button onclick="deleteList(event)">Delete</button>
-            </li>
-        </ol>
-        <script>
-            var ol = document.getElementById("list")
-            var inp = document.getElementById("input")
-            function update() {
-                var item = document.createElement("li")
-                item.innerHTML = inp.value + " <button onclick='deleteList(event)'> Delete</button>"
-                ol.append(item)
-
-            }
-            function deleteList(event) {
-                event.target.parentElement.remove()
-            }
-
-        </script>
-    </center>
 </body>
 
 </html>
